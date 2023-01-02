@@ -6,8 +6,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.Iterator;
+import java.util.Set;
+
 public class IntroductionToSelenium_04_Scopes {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         WebDriver webDriver = new ChromeDriver();
         webDriver.manage().window().maximize();
         webDriver.get("http://www.qaclickacademy.com/");
@@ -22,7 +25,13 @@ public class IntroductionToSelenium_04_Scopes {
         for(int i = 1; i < columnDriver.findElements(By.tagName("a")).size(); i++) {
             String clickOnLinkTab = Keys.chord(Keys.CONTROL, Keys.ENTER);
             columnDriver.findElements(By.tagName("a")).get(i).sendKeys(clickOnLinkTab);
-            
+            Thread.sleep(5000L);
+        }
+        Set<String> urlTitles = webDriver.getWindowHandles();
+        Iterator<String> iterator = urlTitles.iterator();
+        while (iterator.hasNext()){
+            webDriver.switchTo().window(iterator.next());
+            System.out.println(webDriver.getTitle());
         }
     }
 }
