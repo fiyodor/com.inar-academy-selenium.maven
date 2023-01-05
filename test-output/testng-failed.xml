@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default Suite]">
+  <test thread-count="5" name="com.inar-academy-selenium.maven(failed)">
+    <classes>
+      <class name="TestNGTutorials.daysEdited.day3_Params">
+        <methods>
+          <include name="mobileSignOutCarLoan"/>
+          <include name="afterClass"/>
+          <include name="webLoginCarLoan"/>
+          <include name="beforeMethod"/>
+          <include name="BeforeSuite"/>
+          <include name="beforeClass"/>
+          <include name="afterMethod"/>
+          <include name="APICarLoan"/>
+        </methods>
+      </class> <!-- TestNGTutorials.daysEdited.day3_Params -->
+      <class name="TestNGTutorials.daysEdited.day1_ListenersFailed">
+        <methods>
+          <include name="lastExecution"/>
+          <include name="Demo"/>
+          <include name="AfterSuite"/>
+        </methods>
+      </class> <!-- TestNGTutorials.daysEdited.day1_ListenersFailed -->
+      <class name="TestNGTutorials.daysEdited.day4_WithParams">
+        <methods>
+          <include name="webLoginHomeLoan"/>
+        </methods>
+      </class> <!-- TestNGTutorials.daysEdited.day4_WithParams -->
+      <class name="TestNGTutorials.daysEdited.day3_DataProvider">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="APICarLoan"/>
+          <include name="beforeClass"/>
+          <include name="BeforeSuite"/>
+          <include name="mobileSignOutCarLoan"/>
+          <include name="webLoginCarLoan"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- TestNGTutorials.daysEdited.day3_DataProvider -->
+      <class name="TestNGTutorials.daysEdited.day3_API">
+        <methods>
+          <include name="APICarLoan"/>
+          <include name="afterMethod"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="BeforeSuite"/>
+          <include name="webLoginCarLoan"/>
+          <include name="mobileSignOutCarLoan"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- TestNGTutorials.daysEdited.day3_API -->
+    </classes>
+  </test> <!-- com.inar-academy-selenium.maven(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->

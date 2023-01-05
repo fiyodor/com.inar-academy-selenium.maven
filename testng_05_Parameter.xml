@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Loan Department">
+    <parameter name="URL" value="qaclickacademy.com"></parameter>          <!--global parameter-->
+    <test name="Personal Loan">
+        <parameter name="URL" value="personalloan.com"></parameter>      <!--you can write it in test to overwrite the global parameter-->
+        <classes>
+            <class name="TestNGTutorials.days.day1">
+                <methods>
+                    <include name="Demo"/>
+                    <!--<exclude name="SecondTest"></exclude>-->
+                </methods>
+            </class>
+            <class name="TestNGTutorials.days.day2"/>
+            <class name="TestNGTutorials.days.day4"/>
+
+        </classes>
+    </test>
+    <test name="Car Loan">
+        <parameter name="URL" value="carloan.com"></parameter>      <!--you can write it in test to overwrite the global parameter-->
+        <classes>
+            <class name="TestNGTutorials.days.day3">
+                <methods>
+                    <exclude name="API.*"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
